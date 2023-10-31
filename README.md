@@ -9,7 +9,9 @@ Payment API endpoint is created to simulate:
 ### Generate Faker Data & Seed Database
 
 * Run the seeding script
+
 ```
+pip install -r pay-api/requirements.txt
 python db/seed.py --customers 100 --accounts 5 --payments 500 --db=postgresql://postgres:postgres@192.168.86.74:5432/bank
 ```
 
