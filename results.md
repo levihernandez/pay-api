@@ -1,4 +1,4 @@
-### POSTGRES STRESS TEST: PGX
+### POSTGRES STRESS TEST (8vCPUs): PGX
 
 ```shell
           /\      |‾‾| /‾‾/   /‾‾/   
@@ -42,7 +42,7 @@ default ✓ [======================================] 10 VUs  30s
 
 
 
-### POSTGRES STRESS TEST: GO-PG
+### POSTGRES STRESS TEST (8vCPUs): GO-PG
 
 ```shell
           /\      |‾‾| /‾‾/   /‾‾/   
@@ -83,6 +83,11 @@ default ✓ [======================================] 10 VUs  30s
 running (0m30.0s), 00/10 VUs, 63127 complete and 0 interrupted iterations
 default ✓ [======================================] 10 VUs  30s
 ```
+
+> **Comparisons in Postgres**
+> go-pg performed better by p(95)=1.27ms and avg 1.28ms difference at `avg=4.63ms  min=1.48ms med=4.17ms max=65.74ms p(90)=6.68ms p(95)=7.98ms`
+> pgx lagged a few ms at `avg=5.91ms  min=1.29ms med=4.7ms  max=1.01s  p(90)=7.81ms p(95)=9.52ms`
+
 
 ### COCKROACHDB STRESS TEST (24vCPUs): PGX
 
@@ -171,3 +176,7 @@ default ✓ [======================================] 10 VUs  30s
 running (0m30.0s), 00/10 VUs, 72640 complete and 0 interrupted iterations
 default ✓ [======================================] 10 VUs  30s
 ```
+
+> **Comparisons in CockroachDB**
+> go-pg performed better by p(95)=0.68ms and avg 0.08ms difference at `avg=4.07ms  min=1.62ms med=3.64ms max=142.48ms p(90)=5.51ms p(95)=6.77ms`
+> pgx lagged a few ms at `avg=4.15ms min=1.57ms med=3.59ms max=188.8ms  p(90)=5.96ms p(95)=7.45ms`
