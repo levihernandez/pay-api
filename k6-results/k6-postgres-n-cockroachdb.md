@@ -177,10 +177,16 @@ running (0m30.0s), 00/10 VUs, 72640 complete and 0 interrupted iterations
 default ✓ [======================================] 10 VUs  30s
 ```
 
-### Findings:
-![](crdb-cpu.png)
+### CockroachDB UI Console Findings:
 
-> **Comparisons in CockroachDB**
+> CPU: favored Pgx
+![](crdb-cpu.png)
+> SQL Latency: favored Pgx
+![](crdb-sql-latency.png)
+> TPS: favored Pgx
+![](crdb-tps.png)
+
+> **Comparisons in K6 CockroachDB**
 > go-pg performed better by p(95)=0.68ms and avg 0.08ms difference at `avg=4.07ms  min=1.62ms med=3.64ms max=142.48ms p(90)=5.51ms p(95)=6.77ms`
 > pgx lagged a few ms at `avg=4.15ms min=1.57ms med=3.59ms max=188.8ms  p(90)=5.96ms p(95)=7.45ms`
 > CPU favored Pgx giving lower latency overall.
