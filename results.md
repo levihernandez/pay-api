@@ -87,6 +87,45 @@ default ✓ [======================================] 10 VUs  30s
 COCKROACHDB STRESS TEST (24vCPUs): PGX
 
 ```shell
+
+          /\      |‾‾| /‾‾/   /‾‾/   
+     /\  /  \     |  |/  /   /  /    
+    /  \/    \    |     (   /   ‾‾\  
+   /          \   |  |\  \ |  (‾)  | 
+  / __________ \  |__| \__\ \_____/ .io
+
+  execution: local
+     script: pgx-api/pgx-checkBalances.js
+     output: -
+
+  scenarios: (100.00%) 1 scenario, 10 max VUs, 1m0s max duration (incl. graceful stop):
+           * default: 10 looping VUs for 30s (gracefulStop: 30s)
+
+
+     ✓ status was 200
+
+     checks.........................: 100.00% ✓ 71264       ✗ 0    
+     data_received..................: 10 MB   333 kB/s
+     data_sent......................: 9.3 MB  311 kB/s
+     http_req_blocked...............: avg=1.55µs min=0s     med=1µs    max=1.3ms    p(90)=2µs    p(95)=3µs   
+     http_req_connecting............: avg=56ns   min=0s     med=0s     max=451µs    p(90)=0s     p(95)=0s    
+     http_req_duration..............: avg=4.15ms min=1.57ms med=3.59ms max=188.8ms  p(90)=5.96ms p(95)=7.45ms
+       { expected_response:true }...: avg=4.15ms min=1.57ms med=3.59ms max=188.8ms  p(90)=5.96ms p(95)=7.45ms
+     http_req_failed................: 0.00%   ✓ 0           ✗ 71264
+     http_req_receiving.............: avg=22.2µs min=4µs    med=16µs   max=12.5ms   p(90)=30µs   p(95)=43µs  
+     http_req_sending...............: avg=6.56µs min=1µs    med=4µs    max=7.24ms   p(90)=10µs   p(95)=13µs  
+     http_req_tls_handshaking.......: avg=0s     min=0s     med=0s     max=0s       p(90)=0s     p(95)=0s    
+     http_req_waiting...............: avg=4.12ms min=1.55ms med=3.57ms max=188.76ms p(90)=5.91ms p(95)=7.41ms
+     http_reqs......................: 71264   2374.884503/s
+     iteration_duration.............: avg=4.2ms  min=1.58ms med=3.64ms max=190.85ms p(90)=6.03ms p(95)=7.55ms
+     iterations.....................: 71264   2374.884503/s
+     vus............................: 10      min=10        max=10 
+     vus_max........................: 10      min=10        max=10 
+
+
+running (0m30.0s), 00/10 VUs, 71264 complete and 0 interrupted iterations
+default ✓ [======================================] 10 VUs  30s
+
 ```
 
 
