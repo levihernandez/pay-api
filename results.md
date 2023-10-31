@@ -84,7 +84,7 @@ running (0m30.0s), 00/10 VUs, 63127 complete and 0 interrupted iterations
 default ✓ [======================================] 10 VUs  30s
 ```
 
-COCKROACHDB STRESS TEST (24vCPUs): PGX
+### COCKROACHDB STRESS TEST (24vCPUs): PGX
 
 ```shell
 
@@ -129,7 +129,7 @@ default ✓ [======================================] 10 VUs  30s
 ```
 
 
-COCKROACHDB STRESS TEST (24vCPUs): GO-PG
+## COCKROACHDB STRESS TEST (24vCPUs): GO-PG
 
 ```shell
           /\      |‾‾| /‾‾/   /‾‾/   
