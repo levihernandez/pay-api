@@ -75,7 +75,7 @@ go run *.go
 
 ## K6 Stress Test
 
-Modify your endpoint ports in each project to point to CockroachDB when performing stress tests.
+Modify your endpoint ports in each project `config.json` to point to CockroachDB.
 
 * `gopg-api` on port 8088
 
