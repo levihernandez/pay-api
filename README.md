@@ -8,11 +8,22 @@ Payment API endpoint is created to simulate:
 
 ### Generate Faker Data & Seed Database
 
-* Run the seeding script
+* Run the seeding script for **Postgres**
 
 ```
 pip install -r pay-api/requirements.txt
 python db/seed.py --customers 100 --accounts 5 --payments 500 --db=postgresql://postgres:postgres@192.168.86.74:5432/bank
+```
+* Run the seeding script for **CockroachDB**
+ * UI Console: `http://192.168.86.74:8080`
+ * SQL Console: `postgresql://root@192.168.86.74:26257`
+
+```
+cockroach sql --insecure --host=192.168.86.74:26257
+root@192.168.86.74:26257/defaultdb> CREATE DATABASE bank;
+root@192.168.86.74:26257/defaultdb> \q
+
+python db/seed.py --customers 100 --accounts 5 --payments 500 --db=postgresql://root@192.168.86.74:26257/bank
 ```
 
 ## Go Endpoints
