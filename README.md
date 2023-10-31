@@ -42,10 +42,9 @@ python db/seed.py --customers 100 --accounts 5 --payments 500 --db=cockroachdb:/
 * Init the project
 
 ```shell
+cd gopg-api/
 go mod init gopg-api
 go mod tidy
-go get -u github.com/gin-gonic/gin
-go get -u github.com/go-pg/pg/v10
 ```
 
 * Start the API endpoint in http://localhost:8088
@@ -59,12 +58,9 @@ go run *.go
 * Init the project
 
 ```shell
+cd pgx-api/
 go mod init pgx-api
 go mod tidy
-
-go get -u github.com/jackc/pgx/v4
-go get github.com/gin-gonic/gin
-go get github.com/jackc/pgx/v4/pgxpool@v4.18.1
 ```
 
 * Start the API endpoint in http://localhost:8087
