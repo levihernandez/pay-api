@@ -42,7 +42,7 @@ python db/seed.py --customers 100 --accounts 5 --payments 500 --db=cockroachdb:/
 * Init the project
 
 ```shell
-go mod init bun-api
+go mod init gopg-api
 go mod tidy
 go get -u github.com/gin-gonic/gin
 go get -u github.com/go-pg/pg/v10
